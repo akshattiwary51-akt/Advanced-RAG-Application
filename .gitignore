@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Secrets / local config
+.env
+*.env.local
+
+# Runtime data (keep folder skeleton only)
+backend/data/uploads/*
+backend/data/processed/*
+backend/data/vector_store/*
+backend/data/*.db
+!backend/data/**/.gitkeep
+dist/
+# Model caches
+.cache/
+models/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

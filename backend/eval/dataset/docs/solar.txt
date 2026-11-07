@@ -1,0 +1,5 @@
+Photovoltaic cells convert sunlight directly into electricity. Most residential panels use crystalline silicon and reach an efficiency of roughly twenty percent under standard test conditions.
+
+Panel output drops as temperature rises. Manufacturers publish a temperature coefficient, typically around minus 0.35 percent per degree Celsius, so a panel on a hot roof produces less power than the same panel on a cool day.
+
+An inverter changes the direct current from the panels into alternating current for household use. String inverters are cheapest, while microinverters sit under each panel and limit the effect of shading. Most inverters last about twelve years, shorter than the panels themselves, which are warranted for twenty five years.

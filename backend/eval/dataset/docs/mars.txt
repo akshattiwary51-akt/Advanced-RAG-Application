@@ -1,0 +1,5 @@
+The rover landed in a crater chosen for its ancient lake sediments. Its six aluminium wheels were redesigned with thicker skins after early missions suffered punctures from sharp rocks.
+
+A drill on the robotic arm collects rock cores about the size of a piece of chalk. Each sample is sealed in a titanium tube and left on the surface so a future mission can return it to Earth.
+
+Because radio signals take between five and twenty minutes to travel from Mars, the rover cannot be steered in real time. Operators upload a plan each morning and the vehicle drives itself using hazard-avoidance cameras.

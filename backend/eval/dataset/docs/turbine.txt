@@ -1,0 +1,5 @@
+The XJ9000 wind turbine has a rated output of 3.2 megawatts and a rotor diameter of 126 metres. Cut-in wind speed is 3 metres per second and the machine shuts down automatically above 25 metres per second to protect the blades.
+
+Maintenance schedule: the gearbox oil of the XJ9000 must be replaced every 24 months, and the rotor blades require a full inspection once a year. Offshore installations are inspected twice a year because of salt corrosion.
+
+Fault code E417 indicates a pitch system hydraulic pressure drop. Technicians should check the accumulator and hose connections before resetting the controller. Fault code E502 signals a yaw sensor mismatch and requires recalibration.

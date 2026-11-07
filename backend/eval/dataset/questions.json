@@ -1,0 +1,221 @@
+{
+ "description": "Reproducible retrieval evaluation set. A retrieved chunk is relevant iff it comes from `document` and contains `must_contain` (case-insensitive); relevance therefore does not depend on chunk boundaries.",
+ "questions": [
+  {
+   "question": "How efficient are typical residential solar panels?",
+   "document": "solar",
+   "must_contain": "roughly twenty percent",
+   "type": "factoid"
+  },
+  {
+   "question": "What happens to panel output on a hot day?",
+   "document": "solar",
+   "must_contain": "temperature coefficient",
+   "type": "paraphrase"
+  },
+  {
+   "question": "How long do inverters last compared to panels?",
+   "document": "solar",
+   "must_contain": "about twelve years",
+   "type": "factoid"
+  },
+  {
+   "question": "Which inverter type reduces the impact of shade?",
+   "document": "solar",
+   "must_contain": "microinverters sit under each panel",
+   "type": "factoid"
+  },
+  {
+   "question": "Which component turns DC from the roof into AC for the home?",
+   "document": "solar",
+   "must_contain": "alternating current for household use",
+   "type": "paraphrase"
+  },
+  {
+   "question": "How often should a starter be fed?",
+   "document": "bread",
+   "must_contain": "once a day at room temperature",
+   "type": "factoid"
+  },
+  {
+   "question": "What hydration do bakers typically use?",
+   "document": "bread",
+   "must_contain": "hydration of seventy percent",
+   "type": "factoid"
+  },
+  {
+   "question": "Why bake the loaf with the lid on?",
+   "document": "bread",
+   "must_contain": "trap steam",
+   "type": "factoid"
+  },
+  {
+   "question": "What temperature is the oven set to for bread?",
+   "document": "bread",
+   "must_contain": "250 degrees Celsius",
+   "type": "factoid"
+  },
+  {
+   "question": "Why is a wetter dough harder to work with?",
+   "document": "bread",
+   "must_contain": "stickier dough",
+   "type": "paraphrase"
+  },
+  {
+   "question": "What does fault code E417 mean?",
+   "document": "turbine",
+   "must_contain": "pitch system hydraulic pressure drop",
+   "type": "keyword"
+  },
+  {
+   "question": "How often is the XJ9000 gearbox oil replaced?",
+   "document": "turbine",
+   "must_contain": "every 24 months",
+   "type": "keyword"
+  },
+  {
+   "question": "At what wind speed does the turbine shut down?",
+   "document": "turbine",
+   "must_contain": "25 metres per second",
+   "type": "factoid"
+  },
+  {
+   "question": "What is the rotor diameter of the XJ9000?",
+   "document": "turbine",
+   "must_contain": "126 metres",
+   "type": "keyword"
+  },
+  {
+   "question": "What should be done about error E502?",
+   "document": "turbine",
+   "must_contain": "yaw sensor mismatch",
+   "type": "keyword"
+  },
+  {
+   "question": "Why can't the rover be driven live?",
+   "document": "mars",
+   "must_contain": "five and twenty minutes",
+   "type": "factoid"
+  },
+  {
+   "question": "How are collected samples stored?",
+   "document": "mars",
+   "must_contain": "sealed in a titanium tube",
+   "type": "factoid"
+  },
+  {
+   "question": "Why were the wheels redesigned?",
+   "document": "mars",
+   "must_contain": "punctures from sharp rocks",
+   "type": "factoid"
+  },
+  {
+   "question": "Where did the rover land?",
+   "document": "mars",
+   "must_contain": "ancient lake sediments",
+   "type": "factoid"
+  },
+  {
+   "question": "How does the vehicle navigate without a human steering?",
+   "document": "mars",
+   "must_contain": "hazard-avoidance cameras",
+   "type": "paraphrase"
+  },
+  {
+   "question": "How much do index funds typically charge?",
+   "document": "finance",
+   "must_contain": "below 0.2 percent",
+   "type": "factoid"
+  },
+  {
+   "question": "How long does it take money to double at seven percent?",
+   "document": "finance",
+   "must_contain": "doubles every ten years",
+   "type": "factoid"
+  },
+  {
+   "question": "How big should an emergency fund be?",
+   "document": "finance",
+   "must_contain": "three to six months",
+   "type": "factoid"
+  },
+  {
+   "question": "Why own an index fund instead of single stocks?",
+   "document": "finance",
+   "must_contain": "hundreds of companies",
+   "type": "paraphrase"
+  },
+  {
+   "question": "Why keep cash aside before putting money in the market?",
+   "document": "finance",
+   "must_contain": "sell investments at a loss",
+   "type": "paraphrase"
+  },
+  {
+   "question": "How many hours of sleep do adults need?",
+   "document": "sleep",
+   "must_contain": "between seven and nine hours",
+   "type": "factoid"
+  },
+  {
+   "question": "How long does caffeine stay in the body?",
+   "document": "sleep",
+   "must_contain": "half-life of about five hours",
+   "type": "paraphrase"
+  },
+  {
+   "question": "What bedroom temperature is best for sleeping?",
+   "document": "sleep",
+   "must_contain": "eighteen degrees Celsius",
+   "type": "factoid"
+  },
+  {
+   "question": "Why are screens bad before bed?",
+   "document": "sleep",
+   "must_contain": "delay the release of melatonin",
+   "type": "factoid"
+  },
+  {
+   "question": "Is it fine to drink coffee in the evening?",
+   "document": "sleep",
+   "must_contain": "avoiding caffeine after midday",
+   "type": "paraphrase"
+  },
+  {
+   "question": "Who won the football world cup in 1998?",
+   "document": null,
+   "must_contain": null,
+   "type": "unanswerable"
+  },
+  {
+   "question": "What is the capital of Australia?",
+   "document": null,
+   "must_contain": null,
+   "type": "unanswerable"
+  },
+  {
+   "question": "How do I train a neural network?",
+   "document": null,
+   "must_contain": null,
+   "type": "unanswerable"
+  },
+  {
+   "question": "What is the boiling point of mercury?",
+   "document": null,
+   "must_contain": null,
+   "type": "unanswerable"
+  },
+  {
+   "question": "Explain the plot of Hamlet.",
+   "document": null,
+   "must_contain": null,
+   "type": "unanswerable"
+  },
+  {
+   "question": "How many moons does Jupiter have?",
+   "document": null,
+   "must_contain": null,
+   "type": "unanswerable"
+  }
+ ]
+}

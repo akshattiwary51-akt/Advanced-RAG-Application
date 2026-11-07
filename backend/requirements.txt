@@ -1,0 +1,21 @@
+# Web / API
+Flask>=3.0,<4
+Flask-CORS>=4.0
+flasgger>=0.9.7
+SQLAlchemy>=2.0,<3
+python-dotenv>=1.0
+
+# Document processing
+pypdf>=4.0
+python-docx>=1.1
+
+# RAG / AI
+numpy>=1.26
+sentence-transformers>=3.0
+requests>=2.31
+
+# Utilities
+psutil>=5.9
+
+# Testing
+pytest>=8.0
