@@ -80,7 +80,7 @@ class Settings:
     # Retrieval
     top_k: int = field(default_factory=lambda: _env_int("TOP_K", 5))
     similarity_threshold: float = field(
-        default_factory=lambda: _env_float("SIMILARITY_THRESHOLD", 0.25)
+        default_factory=lambda: _env_float("SIMILARITY_THRESHOLD", 0.30)
     )
     retrieval_method: str = field(
         default_factory=lambda: _env_str("RETRIEVAL_METHOD", "semantic")

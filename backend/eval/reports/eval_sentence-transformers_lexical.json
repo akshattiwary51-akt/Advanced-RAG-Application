@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "generated_at": "2026-11-08T02:27:59+00:00",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "embedding_dimension": 384,
+    "reranker": "lexical",
+    "llm": "mock-llm",
+    "k": 5,
+    "repeats": 5,
+    "chunk_size": 400,
+    "chunk_overlap": 60,
+    "documents": 6,
+    "questions": 36,
+    "answerable": 30,
+    "unanswerable": 6,
+    "indexed_chunks": 13
+  },
+  "ingestion_cold": {
+    "documents": 6,
+    "chunks": 13,
+    "timings_ms": {
+      "extract": 91.06840007007122,
+      "clean": 1.780400110874325,
+      "chunk": 2.059200021903962,
+      "embed": 432.8533999505453,
+      "store": 37.528500019107014,
+      "total": 565.3532999567688
+    },
+    "wall_ms": 565.6297999667004
+  },
+  "ingestion_warm": {
+    "documents": 6,
+    "chunks": 13,
+    "timings_ms": {
+      "extract": 3.664500021841377,
+      "clean": 1.1899999808520079,
+      "chunk": 1.5086999046616256,
+      "embed": 0.5581000004895031,
+      "store": 56.30569998174906,
+      "total": 63.28349997056648
+    },
+    "wall_ms": 63.486200000625104,
+    "cache_hits": 13
+  },
+  "vector_store": {
+    "chunks": 13,
+    "documents": 6,
+    "dimension": 384,
+    "model": "all-MiniLM-L6-v2",
+    "memory_bytes": 19968,
+    "disk_bytes": 26789
+  },
+  "process_memory": {
+    "start_mb": 41.4765625,
+    "after_ingest_mb": 519.80078125,
+    "after_retrieval_mb": 516.42578125
+  },
+  "retrieval": {
+    "baseline: semantic": {
+      "answerable_queries": 30,
+      "precision@5": 0.20000000000000007,
+      "precision@3": 0.3333333333333334,
+      "recall@5": 1.0,
+      "hit@1": 0.9666666666666667,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.9833333333333333,
+      "latency_ms": {
+        "mean": 16.09513944390023,
+        "p50": 14.074600010644644,
+        "p95": 24.85176504123956,
+        "max": 28.05419999640435
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.9722222222222222
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 1.0
+        }
+      }
+    },
+    "bm25 (keyword only)": {
+      "answerable_queries": 30,
+      "precision@5": 0.1866666666666667,
+      "precision@3": 0.3111111111111111,
+      "recall@5": 0.9333333333333333,
+      "hit@1": 0.8666666666666667,
+      "hit@3": 0.9333333333333333,
+      "hit@5": 0.9333333333333333,
+      "mrr": 0.9,
+      "latency_ms": {
+        "mean": 11.48568888731663,
+        "p50": 10.505000012926757,
+        "p95": 20.71155000885483,
+        "max": 65.13839995022863
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.8611111111111112
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 0.9375
+        }
+      }
+    },
+    "hybrid (RRF)": {
+      "answerable_queries": 30,
+      "precision@5": 0.20000000000000007,
+      "precision@3": 0.3333333333333334,
+      "recall@5": 1.0,
+      "hit@1": 0.9,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.95,
+      "latency_ms": {
+        "mean": 15.389772776850602,
+        "p50": 14.563400007318705,
+        "p95": 25.09235999023076,
+        "max": 31.929199991282076
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.9444444444444444
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 0.9375
+        }
+      }
+    },
+    "semantic + rerank": {
+      "answerable_queries": 30,
+      "precision@5": 0.20000000000000007,
+      "precision@3": 0.3333333333333334,
+      "recall@5": 1.0,
+      "hit@1": 0.9,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.95,
+      "latency_ms": {
+        "mean": 11.89919055355454,
+        "p50": 10.346800001570955,
+        "p95": 18.70040499488822,
+        "max": 34.307299996726215
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.9444444444444444
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 0.9375
+        }
+      }
+    },
+    "hybrid + rerank": {
+      "answerable_queries": 30,
+      "precision@5": 0.20000000000000007,
+      "precision@3": 0.3333333333333334,
+      "recall@5": 1.0,
+      "hit@1": 0.9,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.95,
+      "latency_ms": {
+        "mean": 11.134957779884441,
+        "p50": 10.026950010797009,
+        "p95": 17.458250012714416,
+        "max": 20.53830004297197
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.9444444444444444
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 0.9375
+        }
+      }
+    },
+    "hybrid + MMR": {
+      "answerable_queries": 30,
+      "precision@5": 0.20000000000000007,
+      "precision@3": 0.3333333333333334,
+      "recall@5": 1.0,
+      "hit@1": 0.9666666666666667,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.9833333333333333,
+      "latency_ms": {
+        "mean": 15.61576444396956,
+        "p50": 13.498500018613413,
+        "p95": 24.128485016990453,
+        "max": 29.19649996329099
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.9722222222222222
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 1.0
+        }
+      }
+    },
+    "hybrid + query expansion": {
+      "answerable_queries": 30,
+      "precision@5": 0.20000000000000007,
+      "precision@3": 0.3333333333333334,
+      "recall@5": 1.0,
+      "hit@1": 0.5666666666666667,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.7666666666666665,
+      "latency_ms": {
+        "mean": 27.197749444490505,
+        "p50": 25.904749985784292,
+        "p95": 45.033025008160614,
+        "max": 49.80530001921579
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.7407407407407407
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 0.7083333333333333
+        }
+      }
+    },
+    "hybrid + rerank + MMR": {
+      "answerable_queries": 30,
+      "precision@5": 0.1866666666666667,
+      "precision@3": 0.3111111111111111,
+      "recall@5": 0.9333333333333333,
+      "hit@1": 0.9,
+      "hit@3": 0.9333333333333333,
+      "hit@5": 0.9333333333333333,
+      "mrr": 0.9166666666666666,
+      "latency_ms": {
+        "mean": 16.792948332537588,
+        "p50": 13.671299995621666,
+        "p95": 25.47274999087676,
+        "max": 56.9277000031434
+      },
+      "mrr_by_type": {
+        "factoid": {
+          "n": 18,
+          "mrr": 0.8888888888888888
+        },
+        "keyword": {
+          "n": 4,
+          "mrr": 1.0
+        },
+        "paraphrase": {
+          "n": 8,
+          "mrr": 0.9375
+        }
+      }
+    }
+  },
+  "compression": {
+    "context_chars_before": 47516,
+    "context_chars_after": 27473,
+    "size_reduction_pct": 42.18158094115666,
+    "answer_phrase_retention": 1.0,
+    "relevant_chunks_checked": 30
+  },
+  "threshold_tuning": {
+    "rows": [
+      {
+        "threshold": 0.0,
+        "answer_rate": 1.0,
+        "reject_rate": 0.0,
+        "balanced_accuracy": 0.5
+      },
+      {
+        "threshold": 0.05,
+        "answer_rate": 1.0,
+        "reject_rate": 0.0,
+        "balanced_accuracy": 0.5
+      },
+      {
+        "threshold": 0.1,
+        "answer_rate": 1.0,
+        "reject_rate": 0.3333333333333333,
+        "balanced_accuracy": 0.6666666666666666
+      },
+      {
+        "threshold": 0.15,
+        "answer_rate": 1.0,
+        "reject_rate": 0.8333333333333334,
+        "balanced_accuracy": 0.9166666666666667
+      },
+      {
+        "threshold": 0.2,
+        "answer_rate": 1.0,
+        "reject_rate": 0.8333333333333334,
+        "balanced_accuracy": 0.9166666666666667
+      },
+      {
+        "threshold": 0.25,
+        "answer_rate": 0.9666666666666667,
+        "reject_rate": 0.8333333333333334,
+        "balanced_accuracy": 0.9
+      },
+      {
+        "threshold": 0.3,
+        "answer_rate": 0.9666666666666667,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.9833333333333334
+      },
+      {
+        "threshold": 0.35,
+        "answer_rate": 0.9,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.95
+      },
+      {
+        "threshold": 0.4,
+        "answer_rate": 0.8333333333333334,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.9166666666666667
+      },
+      {
+        "threshold": 0.45,
+        "answer_rate": 0.7666666666666667,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.8833333333333333
+      },
+      {
+        "threshold": 0.5,
+        "answer_rate": 0.7333333333333333,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.8666666666666667
+      },
+      {
+        "threshold": 0.55,
+        "answer_rate": 0.6333333333333333,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.8166666666666667
+      },
+      {
+        "threshold": 0.6,
+        "answer_rate": 0.4666666666666667,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.7333333333333334
+      },
+      {
+        "threshold": 0.65,
+        "answer_rate": 0.3,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.65
+      },
+      {
+        "threshold": 0.7,
+        "answer_rate": 0.1,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.55
+      },
+      {
+        "threshold": 0.75,
+        "answer_rate": 0.0,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.5
+      },
+      {
+        "threshold": 0.8,
+        "answer_rate": 0.0,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.5
+      },
+      {
+        "threshold": 0.85,
+        "answer_rate": 0.0,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.5
+      },
+      {
+        "threshold": 0.9,
+        "answer_rate": 0.0,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.5
+      },
+      {
+        "threshold": 0.95,
+        "answer_rate": 0.0,
+        "reject_rate": 1.0,
+        "balanced_accuracy": 0.5
+      }
+    ],
+    "best": {
+      "threshold": 0.3,
+      "answer_rate": 0.9666666666666667,
+      "reject_rate": 1.0,
+      "balanced_accuracy": 0.9833333333333334
+    },
+    "answerable": 30,
+    "unanswerable": 6
+  }
+}

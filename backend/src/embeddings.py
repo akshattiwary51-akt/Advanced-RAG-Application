@@ -87,7 +87,10 @@ class SentenceTransformerEmbedder:
                     ) from exc
                 log.info("Loading embedding model %s", self.model_name)
                 self._model = SentenceTransformer(self.model_name)
-                self._dimension = int(self._model.get_sentence_embedding_dimension())
+                # renamed in sentence-transformers 5.x; support both to avoid a FutureWarning
+                get_dim = getattr(self._model, "get_embedding_dimension", None) or \
+                    self._model.get_sentence_embedding_dimension
+                self._dimension = int(get_dim())
         return self._model
 
     @property

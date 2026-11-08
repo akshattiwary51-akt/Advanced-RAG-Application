@@ -4,7 +4,7 @@ const KEY = 'rag.settings.v1'
 
 export const DEFAULT_SETTINGS = {
   topK: 5,
-  similarityThreshold: 0.25,
+  similarityThreshold: 0.30,
   temperature: 0.2,
   maxTokens: 1024,
   model: '', // empty = use the server's configured model
